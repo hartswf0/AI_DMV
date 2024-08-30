@@ -1,0 +1,276 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4e3c3; /* Light beige background */
+    color: #000000; /* Black text for everything except the title */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Side Menu */
+nav {
+    width: 488px; /* Increase the width */
+    background-color: #e3d5b6;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+nav h2 {
+    color: #ff4d00; /* Orange title */
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ff4d00;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    color: #000000; /* Black text */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    background-color: #e3d5b6;
+    border-left: 4px solid #ff4d00;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #d4c4a8; /* Slightly lighter beige on hover */
+}
+
+/* Main Content Area */
+main {
+    margin-left: 400px; /* Offset by the width of the nav */
+    padding: 40px 20px;
+    padding-right: 40px; /* Added padding to the right */
+    max-width: calc(100% - 440px); /* Adjusted to fit with the padding */
+    background-color: #ffffff; /* White background for ease of reading */
+    color: #000000;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    position: relative;
+}
+
+/* Headers */
+h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ff4d00; /* Orange for titles */
+    font-size: 22px;
+    letter-spacing: 1px;
+    background-color: rgba(211, 211, 211, 0.3); /* Light grey partial transparency */
+    padding: 10px;
+    padding-left: 20px; /* Extra padding to make space for the orange bar */
+    font-family: 'Courier New', monospace; /* Different font for a more distinct look */
+    position: relative;
+}
+
+h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #ff4d00; /* Orange vertical bar */
+}
+
+h3, h1 {
+    font-family: 'Courier New', monospace; /* Same font as article title */
+    color: #000000; /* Keep the titles in black */
+    font-size: 20px; /* Slightly smaller than the article title */
+    text-transform: uppercase; /* Make them uppercase like the article title */
+    margin-bottom: 10px;
+    letter-spacing: 1.2px; /* Slight letter spacing for readability */
+    font-weight: bold; /* Ensure the titles are bold */
+    padding-bottom: 5px; /* Space below the title */
+    border-bottom: 1px solid #d4c4a8; /* Subtle bottom border to separate sections */
+    background: none; /* Remove background */
+}
+
+/* Enhanced Quotes Styling - Monogram Inspired */
+blockquote {
+    font-style: italic;
+    font-size: 18px;
+    color: #000000;
+    margin: 30px 0;
+    padding: 20px;
+    background: #d3d3d3; /* Light grey background */
+    border-left: 6px solid #ff4d00;
+    border-radius: 5px;
+    line-height: 1.7;
+    font-family: 'Georgia', serif; /* Serif font for quotes */
+    position: relative;
+}
+
+blockquote:before {
+    content: open-quote;
+    font-size: 40px;
+    color: #ff4d00; /* Orange for the quotes symbol */
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    opacity: 0.3;
+}
+
+blockquote:after {
+    content: close-quote;
+    font-size: 40px;
+    color: #ff4d00; /* Orange for the quotes symbol */
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    opacity: 0.3;
+}
+
+/* Parameter Name Positioning */
+.parameter-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #e3d5b6; /* Slightly darker background for content sections */
+    border-radius: 5px;
+    border: 1px solid #d4c4a8; /* Subtle border color */
+    position: relative;
+}
+
+.parameter-group .parameter-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff4d00; /* Orange for parameter names */
+    padding: 4px 8px;
+    background-color: #f4e3c3;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    text-transform: uppercase;
+    z-index: 2;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+.parameter-group .parameter-content {
+    background: #f4e3c3;
+    padding: 20px;
+    border-left: 4px solid #ff4d00;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Lists */
+ul.parameter-list {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+ul.parameter-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #000000;
+}
+
+ul.parameter-list li:before {
+    content: '\25AA';  /* Filled bullet */
+    color: #ff4d00; /* Orange bullet points */
+    font-size: 10px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+/* Author Name Styling */
+.author-names {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Article ID Styling */
+.article-id {
+    font-size: 12px;
+    color: #888888; /* Slightly lighter gray for ID text */
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Extra space between articles */
+.article {
+    margin-bottom: 60px; /* Increased margin to add space before the next article */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        position: relative;
+        padding: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 10px;
+        max-width: 100%;
+    }
+
+    h2, h3, h1 {
+        font-size: 18px;
+    }
+
+    blockquote {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .parameter-group {
+        padding: 15px;
+    }
+
+    .parameter-group .parameter-name {
+        font-size: 14px;
+    }
+
+    .parameter-group .parameter-content {
+        padding: 15px;
+    }
+
+    .article {
+        margin-bottom: 40px; /* Adjusted space for smaller screens */
+    }
+}
