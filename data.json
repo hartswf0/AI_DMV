@@ -111,7 +111,7 @@
         "ID": "CSCW_2023_LLM_Social_Computing",
     
         "Main_Findings": {
-          "Emerging_Norms": "The use of LLMs in social computing research is rapidly developing, but there is a growing need for clear guidelines around the ethical, privacy, and validity challenges associated with these technologies.",
+          "Emerging_Norms": "The use of LLMs for social computing research is rapidly developing, but there is a growing need for clear guidelines around the ethical, privacy, and validity challenges associated with these technologies.",
           "Validity_Concerns": "LLMs present validity challenges due to their non-deterministic nature, where outputs can vary based on input nuances, making consistent and reliable research difficult.",
           "Privacy_and_Ethics": "The integration of LLMs raises significant privacy concerns, particularly in how user data is used and protected. Ethical issues also arise in how LLMs might replicate and reinforce biases present in the training data."
         },
